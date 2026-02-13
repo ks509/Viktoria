@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Viktoria ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:-apple-system,system-ui;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+color:white;
+text-align:center;
+}
+
+.card{
+background:#1b1b1b;
+padding:30px;
+border-radius:22px;
+max-width:340px;
+box-shadow:0 30px 80px rgba(0,0,0,0.7);
+animation:fade .6s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1}
+}
+
+img{
+width:100%;
+border-radius:16px;
+margin-bottom:18px;
+}
+
+h2{
+margin:10px 0 20px;
+font-weight:600;
+}
+
+button{
+padding:12px 18px;
+border-radius:12px;
+border:none;
+font-size:16px;
+cursor:pointer;
+margin:6px;
+transition:.2s;
+}
+
+.yes{
+background:white;
+color:black;
+font-weight:600;
+}
+
+.yes:active{transform:scale(.96)}
+
+.no{
+background:#333;
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="photo.jpg">
+
+<h2>Viktoria,<br>will you be my Valentine? ❤️</h2>
+
+<button class="yes" onclick="yes()">Yes</button>
+<button class="no" id="no">No</button>
+
+</div>
+
+<script>
+function yes(){
+document.body.innerHTML =
+"<h1 style='font-family:sans-serif;font-size:34px'>It’s official ❤️<br>Kristofers & Viktoria</h1>"
+}
+
+const no=document.getElementById("no")
+
+no.onmouseenter = () => {
+no.style.position="relative"
+no.style.left=(Math.random()*200-100)+'px'
+no.style.top=(Math.random()*120-60)+'px'
+}
+</script>
+
+</body>
+</html>
