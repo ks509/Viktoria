@@ -7,8 +7,8 @@
 <style>
 body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
-background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+font-family:-apple-system,Arial;
+background:#111;
 height:100vh;
 display:flex;
 justify-content:center;
@@ -42,16 +42,8 @@ margin:6px;
 cursor:pointer;
 }
 
-.yes{
-background:white;
-color:black;
-font-weight:700;
-}
-
-.no{
-background:#333;
-color:#aaa;
-}
+.yes{background:white;color:black;font-weight:700;}
+.no{background:#333;color:#aaa;}
 </style>
 </head>
 
@@ -59,7 +51,7 @@ color:#aaa;
 
 <div class="card">
 
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAClAOsDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLxFkNTcoKSorLS4f/EABoBAAMBAQEBAAAAAAAAAAAAAAABAgMEBQb/xAAxEQACAgIBAwMCBAUEAwAAAAAAAQIRAwQSITFBE1FhIjJxgZEUMkKhsdHh8EJS4f/aAAwDAQACEQMRAD8A+uKKKKAP/Z">
+<img src="photo.JPG">
 
 <h2>Viktoria,<br>will you be my Valentine? ❤️</h2>
 
@@ -70,17 +62,14 @@ color:#aaa;
 
 <script>
 function accept(){
-document.body.innerHTML =
-"<h1 style='font-family:sans-serif'>It’s official ❤️<br>Kristofers & Viktoria</h1>";
+document.body.innerHTML="<h1>It’s official ❤️<br>Kristofers & Viktoria</h1>";
 }
 
 const noBtn=document.getElementById("no");
-
-noBtn.addEventListener("mouseenter",()=>{
+noBtn.onmouseenter=()=>{
 noBtn.style.position="relative";
 noBtn.style.left=(Math.random()*200-100)+'px';
-noBtn.style.top=(Math.random()*120-60)+'px';
-});
+};
 </script>
 
 </body>
